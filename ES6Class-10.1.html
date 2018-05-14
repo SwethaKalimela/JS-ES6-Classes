@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Assignment 10.1</title>
+    <script>
+        class Rectangle { //defining a class rectangle
+            constructor(length, breadth){ //with length and breadth and initializing them in constructor
+                this.length = length;
+                this.breadth = breadth;
+            }
+            
+            calculateArea(){
+                var area = this.length*this.breadth; //to calculate area length*breadth
+                console.log(area); //print to console
+                document.getElementById("id1").value=area; //dislay the area calculated in Area text box
+               
+            }
+        }
+        function myFunction(){
+        var len= document.getElementById("text1").value; //read values from the length text box from user
+        var bre= document.getElementById("text2").value; //read values from the breadth text box from user
+        var x = new Rectangle(len,bre); //create a new object & pass the above read values to the class constructor
+        x.calculateArea() //calculate area
+        }
+        
+    </script>
+</head>
+<body>
+   Length: <input type="text" name="" id="text1"><br>
+   Breadth: <input type="text" name="" id="text2"><br>
+   Area: <input type="text" id="id1"><br>
+   <button onclick="myFunction()">Click Me</button> <!--click to calculate area and dislay result in Area text box-->
+  
+</body>
+</html>
